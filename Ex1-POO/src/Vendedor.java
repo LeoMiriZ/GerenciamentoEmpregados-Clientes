@@ -1,5 +1,5 @@
 
-public class Vendedor {
+public class Vendedor extends Empregado implements Salario {
 
 	private double totalDasVendas;
 	private double comissao;
