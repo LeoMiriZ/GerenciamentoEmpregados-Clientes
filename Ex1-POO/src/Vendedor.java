@@ -37,4 +37,9 @@ public class Vendedor extends Empregado implements Salario {
 	}
 
 	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "\nNome: " + nome + "\nCPF: " + cpf + "\nTotal de Vendas: " + totalDasVendas + "\nComissão: " + comissao + "\n Matricula: " + matricula + "\n";
+	}	
 }

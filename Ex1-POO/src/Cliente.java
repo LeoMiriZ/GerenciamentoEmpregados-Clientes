@@ -3,9 +3,9 @@ public class Cliente extends Pessoa {
 	
 	private double valorDaDivida;
 
-	public Cliente() {
-		
-	}
+public Cliente(){
+
+}
 	
 
     public Cliente(String nome, String cpf, double valorDaDivida) {
@@ -34,19 +34,12 @@ public class Cliente extends Pessoa {
     }
 
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    @Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "\nNome: " + nome + "\nCPF: " + cpf + "\nValorDaDívida: " + valorDaDivida + "\n";
+	}	
 }
+    
+    
+    

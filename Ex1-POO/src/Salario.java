@@ -1,5 +1,6 @@
 
-public class Salario {
+public interface Salario {
 
 	public double calcularSalario();
+
 }

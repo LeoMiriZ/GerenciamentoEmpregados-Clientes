@@ -1,18 +1,44 @@
-public class Gerente extends Empregado implements Bonus{
-	
-	    private double salario;
-	    private double bonus;
+public class Gerente extends Empregado implements Bonus {
 
-	    public Gerente(String nome, String cpf, double salario, double bonus) {
-	        super(nome, cpf);
+	private double salario;
+	private double bonus;
 
-	        this.salario = salario;
-	        this.bonus = bonus;
-	    }
-
-	    @Override
-	    public double calcularBonus() {
-	        return this.salario * this.bonus;
-	    }
+	public Gerente() {
 
 	}
+
+	public Gerente(String nome, String cpf, double salario, double bonus) {
+		super(nome, cpf);
+
+		this.salario = salario;
+		this.bonus = bonus;
+	}
+
+	public void setSalario(double salario) {
+		this.salario = salario;
+	}
+
+	public double getSalario() {
+		return salario;
+	}
+
+	public void setBonus(double bonus) {
+		this.bonus = bonus;
+	}
+
+	public double getBonus() {
+		return bonus;
+	}
+
+	@Override
+	public double calcularBonus() {
+		return this.salario * this.bonus;
+	}
+
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "\nNome: " + nome + "\nCPF: " + cpf + "\nSalario: " + salario + "\nBonus: " + bonus + "\nMatricula: " + matricula + "\n";
+	}
+}

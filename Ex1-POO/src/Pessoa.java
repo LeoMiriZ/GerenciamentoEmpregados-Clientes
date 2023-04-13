@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Collections;
-import java.util.UUID;
+
 
 public class Pessoa {
 	
@@ -19,6 +19,9 @@ public class Pessoa {
 		
 	}
 
+	public Pessoa(){
+
+	}
 
 	public String getNome() {
 		return nome;
