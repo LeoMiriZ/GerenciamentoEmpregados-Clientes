@@ -17,7 +17,6 @@ public abstract class Empregado extends Pessoa {
 	}
 
 	public Empregado(String nome, String cpf) {
-		// TODO Auto-generated constructor stub
 
 		super(nome, cpf);
 
@@ -27,7 +26,6 @@ public abstract class Empregado extends Pessoa {
 
 	@Override
 	public boolean equals(Object obj) {
-		// TODO Auto-generated method stub
 		return ((Pessoa) obj).cpf.equals(this.cpf);
 	}
 
