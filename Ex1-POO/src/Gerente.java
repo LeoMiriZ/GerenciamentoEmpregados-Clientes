@@ -40,10 +40,11 @@ public class Gerente extends Empregado implements Bonus {
 		// TODO Auto-generated method stub
 		return ((Pessoa) obj).cpf.equals(this.cpf);
 	}
-	
+
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "\nEmpregado(Gerente) \nNome: " + nome + "\nCPF: " + cpf + "\nSalario: " + salario + "\nBonus: " + bonus + "\nMatricula: " + matricula + "\n";
+		return "\nEmpregado(Gerente) \nNome: " + nome + "\nCPF: " + cpf + "\nSalario: " + salario + "\nBonus: " + bonus
+				+ "\nMatricula: " + matricula + "\n";
 	}
 }

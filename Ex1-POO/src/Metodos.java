@@ -7,7 +7,6 @@ import java.util.ArrayList;
 public class Metodos {
 	private ArrayList<Pessoa> listaPessoa = new ArrayList<>();
 
-
 	public void menu() {
 
 		int aux = 0;
@@ -113,34 +112,34 @@ public class Metodos {
 	public void cadastrarCliente() {
 		String nome = "", cpf = "";
 		double valorDaDivida = 0;
-		
+
 		Cliente c = new Cliente();
 
-				nome = showInputDialog("Insira seu nome");
-				cpf = showInputDialog("Insira seu CPF");
-				valorDaDivida = Double.parseDouble(showInputDialog(null, "Insira seu Valor de dívida"));
-				
-				c.setNome(nome);
-				c.setCpf(cpf);
-				c.setValorDaDivida(valorDaDivida);
+		nome = showInputDialog("Insira seu nome");
+		cpf = showInputDialog("Insira seu CPF");
+		valorDaDivida = Double.parseDouble(showInputDialog(null, "Insira seu Valor de dívida"));
 
-				showMessageDialog(null, c);
+		c.setNome(nome);
+		c.setCpf(cpf);
+		c.setValorDaDivida(valorDaDivida);
 
-				listaPessoa.add(c);
+		showMessageDialog(null, c);
+
+		listaPessoa.add(c);
 
 	}
 
-	public void pesquisar(ArrayList<Pessoa> pessoas )  {
+	public void pesquisar(ArrayList<Pessoa> pessoas) {
 
-		String pesq ="";
+		String pesq = "";
 		pesq = showInputDialog(null, "Digite o CPF a ser pesquisado:");
-		for(Pessoa pessoa : pessoas){
-			if(pessoa.equals(new Pessoa("", pesq))){
+		for (Pessoa pessoa : pessoas) {
+			if (pessoa.equals(new Pessoa("", pesq))) {
 				showMessageDialog(null, pessoa);
-				
-			return;
+
+				return;
+			}
 		}
-	}
 		showMessageDialog(null, "O CPF digitado não foi encontrado.");
 
 	}
@@ -149,50 +148,50 @@ public class Metodos {
 
 		int size = pessoas.size();
 
-		for(int i = 0; i<size; i++){
-		if (pessoas.get(i) instanceof Empregado) {
-			Empregado emp = (Empregado) pessoas.get(i);
+		for (int i = 0; i < size; i++) {
+			if (pessoas.get(i) instanceof Empregado) {
+				Empregado emp = (Empregado) pessoas.get(i);
 
-			showMessageDialog(null, emp);
+				showMessageDialog(null, emp);
+			}
 		}
-	}
 		return;
-	    
+
 	}
 
 	public void listarClientes(ArrayList<Pessoa> pessoas) {
 
 		int size = pessoas.size();
 
-		for(int i = 0; i<size; i++)
-		if (pessoas.get(i) instanceof Cliente) {
-			Cliente cli = (Cliente) pessoas.get(i);
+		for (int i = 0; i < size; i++)
+			if (pessoas.get(i) instanceof Cliente) {
+				Cliente cli = (Cliente) pessoas.get(i);
 
-			showMessageDialog(null, cli);
-		}
+				showMessageDialog(null, cli);
+			}
 		return;
 
 	}
 
 	public void remover(ArrayList<Pessoa> pessoas) {
 
-		String pesq ="";
+		String pesq = "";
 		pesq = showInputDialog(null, "Digite o CPF a ser deletado:");
-		for(Pessoa pessoa : pessoas){
-			if(pessoa.equals(new Pessoa("", pesq))){
+		for (Pessoa pessoa : pessoas) {
+			if (pessoa.equals(new Pessoa("", pesq))) {
 
 				Pessoa vasco = null;
 				vasco = new Pessoa("", pesq);
 				pessoas.remove(vasco);
-				
+
 				return;
-				
+
 			}
 
 		}
 
 		showMessageDialog(null, "CPF não encontrado");
-		
+
 	}
-	
+
 }
