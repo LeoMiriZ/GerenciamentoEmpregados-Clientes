@@ -35,10 +35,15 @@ public class Gerente extends Empregado implements Bonus {
 		return this.salario * this.bonus;
 	}
 
+	@Override
+	public boolean equals(Object obj) {
+		// TODO Auto-generated method stub
+		return ((Pessoa) obj).cpf.equals(this.cpf);
+	}
 	
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "\nNome: " + nome + "\nCPF: " + cpf + "\nSalario: " + salario + "\nBonus: " + bonus + "\nMatricula: " + matricula + "\n";
+		return "\nEmpregado(Gerente) \nNome: " + nome + "\nCPF: " + cpf + "\nSalario: " + salario + "\nBonus: " + bonus + "\nMatricula: " + matricula + "\n";
 	}
 }

@@ -25,6 +25,10 @@ public abstract class Empregado extends Pessoa {
 
 	}
 
-	
+	@Override
+	public boolean equals(Object obj) {
+		// TODO Auto-generated method stub
+		return ((Pessoa) obj).cpf.equals(this.cpf);
+	}
 
 }

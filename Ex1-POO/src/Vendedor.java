@@ -36,10 +36,15 @@ public class Vendedor extends Empregado implements Salario {
 		this.comissao = comissao;
 	}
 
+	@Override
+	public boolean equals(Object obj) {
+		// TODO Auto-generated method stub
+		return ((Pessoa) obj).cpf.equals(this.cpf);
+	}
 	
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "\nNome: " + nome + "\nCPF: " + cpf + "\nTotal de Vendas: " + totalDasVendas + "\nComissão: " + comissao + "\n Matricula: " + matricula + "\n";
+		return "\nEmpregado(Vendedor) \nNome: " + nome + "\nCPF: " + cpf + "\nTotal de Vendas: " + totalDasVendas + "\nComissão: " + comissao + "\n Matricula: " + matricula + "\n";
 	}	
 }

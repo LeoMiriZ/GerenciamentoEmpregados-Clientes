@@ -33,11 +33,16 @@ public Cliente(){
     	this.valorDaDivida = valorDaDivida;
     }
 
-    
+    @Override
+	public boolean equals(Object obj) {
+		// TODO Auto-generated method stub
+		return ((Pessoa) obj).cpf.equals(this.cpf);
+	}
+
     @Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "\nNome: " + nome + "\nCPF: " + cpf + "\nValorDaDívida: " + valorDaDivida + "\n";
+		return "\nCliente \nNome: " + nome + "\nCPF: " + cpf + "\nValorDaDívida: " + valorDaDivida + "\n";
 	}	
 }
     
