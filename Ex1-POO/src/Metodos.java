@@ -92,7 +92,7 @@ public class Metodos {
 				nome = showInputDialog("Insira seu nome");
 				cpf = showInputDialog("Insira seu CPF");
 				salario = Double.parseDouble(showInputDialog(null, "Insira seu salário"));
-				bonus = Double.parseDouble(showInputDialog(null, "Insira sua bônus"));
+				bonus = Double.parseDouble(showInputDialog(null, "Insira seu bônus"));
 				matricula = UUID.randomUUID().toString();
 
 				gerente.setNome(nome);
