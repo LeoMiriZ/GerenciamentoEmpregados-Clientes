@@ -1,9 +1,15 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Collections;
+import java.util.UUID;
 
 public class Pessoa {
 	
 	protected String nome;
 	protected String cpf;
 	
+	private List<Pessoa> pessoas = new ArrayList<>();
+
 	
 	public Pessoa(String nome, String cpf) {
 		// TODO Auto-generated constructor stub
@@ -46,5 +52,13 @@ public class Pessoa {
 		// TODO Auto-generated method stub
 		return ((Pessoa) obj).cpf.equals(this.cpf);
 	}
+	 
+		public List<Pessoa> getPessoa() {
+	        return Collections.unmodifiableList(pessoas);
+	    }
 
-}
+	    public void addPessoas(Pessoa pessoa) {
+	        this.pessoas.add(pessoa);
+	    }
+	    
+	}

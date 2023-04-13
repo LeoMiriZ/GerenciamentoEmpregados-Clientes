@@ -15,7 +15,7 @@ import java.util.ArrayList;
 			while (true) {
 
 				aux = Integer.parseInt(showInputDialog(
-						"Escolha uma operação: \n1. Cadastrar Empregado \n2. Cadastrar Cliente \n3. Pesquisar \n4. Listar Empregados \n 5. Listar Clientes \n6. Remover \n7. Finalizar"));
+						"Escolha uma operaï¿½ï¿½o: \n1. Cadastrar Empregado \n2. Cadastrar Cliente \n3. Pesquisar \n4. Listar Empregados \n 5. Listar Clientes \n6. Remover \n7. Finalizar"));
 
 				if (aux == 1) {
 
@@ -43,12 +43,12 @@ import java.util.ArrayList;
 					
 				} else if (aux == 7) {
 					
-					showMessageDialog(null, "Operação finalizada com sucesso!");
+					showMessageDialog(null, "Operaï¿½ï¿½o finalizada com sucesso!");
 					break;
 					
 				} else {
 					
-					showMessageDialog(null, "Insira uma operação válida");
+					showMessageDialog(null, "Insira uma operaï¿½ï¿½o vï¿½lida");
 					return;
 					
 				}
@@ -59,19 +59,39 @@ import java.util.ArrayList;
 		
 		public void cadastrarEmpregado() {
 			int aux = 0;
-			String nome, cpf, matricula;
+			String nome = "", cpf = "", matricula;
 			
-			nome = showInputDialog("Insira seu nome");
-			cpf = showInputDialog("Insira seu CPF");
+			
 			
 			while(aux != 1 && aux != 2) {
 			aux = Integer.parseInt(showInputDialog("Digite 1 para Vendedor ou 2 para Gerente."));
 			
 			if(aux == 1) {
 				
+				Pessoa vendedor = new Pessoa(nome, cpf);
+				
+				nome = showInputDialog("Insira seu nome");
+				cpf = showInputDialog("Insira seu CPF");
+				
+				vendedor.setNome(nome);
+				vendedor.setCpf(cpf);
+				
+				showMessageDialog(null, vendedor);
 				
 				
 			}else if (aux == 2) {
+				
+				Empregado gerente = new Empregado();
+				
+				nome = showInputDialog("Insira seu nome");
+				cpf = showInputDialog("Insira seu CPF");
+				
+				gerente.setNome(nome);
+				gerente.setCpf(cpf);
+				
+				for (int i = 0; i < gerente.length(); i++) {
+					
+				}
 				
 			}else {
 				showMessageDialog(null, "Digite um valor valido.");
@@ -98,5 +118,7 @@ import java.util.ArrayList;
 		public void remover() {
 			
 		}
+		
+		
 	}
 
